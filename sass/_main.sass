@@ -1,0 +1,69 @@
+main 
+    background-color: #666
+    section:nth-of-type(odd) div.header
+        transform: rotate(-3deg)
+    section:nth-of-type(even) div.header
+        transform: rotate(3deg)
+    section
+        display: flex
+        flex-direction: column
+        text-align: center
+        overflow: hidden
+        div.header
+            font-size: 1.8rem
+            text-align: center
+            margin-top: -2vh
+            padding: 2vh
+            background-color: black
+            color: white
+            
+        div.info
+            text-align: center
+            padding: 2vh
+            text-align: justify
+
+
+    section.hello
+        display: flex
+        flex-direction: row
+        height: 30vh
+        align-items: center
+        justify-content: space-around
+    
+        div.short 
+            background-color: #304130
+            width: 50%
+            line-height: 5vh
+            letter-spacing: 1px
+            padding: 2vh
+            text-align: center
+
+        div.img
+            background-color: #30a030
+            width: 30%
+
+    section.about
+            background-color: #0b720b
+            div.info
+                height: 20vh
+                padding-bottom: 20px
+    section.projects
+            background-color: #55c955
+            div.project
+                display: flex
+                flex-direction: column
+
+                text-align: center
+                padding-bottom: 20px
+                
+                div.title
+                    font-size: 1.4rem
+                    background-color: #7484a0
+                    line-height: 3rem
+                div.gallery
+                    font-size: 1.4rem
+                div.info
+                    background-color: #7414a0
+                    font-size: 1rem
+                    a
+                        color: white

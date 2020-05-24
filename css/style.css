@@ -1,0 +1,179 @@
+html {
+  font-family: oswald;
+  font-size: 2.5vh;
+  margin: 0;
+  padding: 0;
+  height: 150vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  background-color: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header div {
+  background-color: #ddd;
+  font-size: 1.5rem;
+  padding: 20px;
+  width: 30%;
+}
+
+header nav {
+  width: 60%;
+  padding: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header nav ul li {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  background-color: #666;
+}
+
+main section:nth-of-type(odd) div.header {
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+main section:nth-of-type(even) div.header {
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+main section div.header {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: -2vh;
+  padding: 2vh;
+  background-color: black;
+  color: white;
+}
+
+main section div.info {
+  text-align: center;
+  padding: 2vh;
+  text-align: justify;
+}
+
+main section.hello {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 30vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main section.hello div.short {
+  background-color: #304130;
+  width: 50%;
+  line-height: 5vh;
+  letter-spacing: 1px;
+  padding: 2vh;
+  text-align: center;
+}
+
+main section.hello div.img {
+  background-color: #30a030;
+  width: 30%;
+}
+
+main section.about {
+  background-color: #0b720b;
+}
+
+main section.about div.info {
+  height: 20vh;
+  padding-bottom: 20px;
+}
+
+main section.projects {
+  background-color: #55c955;
+}
+
+main section.projects div.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+main section.projects div.project div.title {
+  font-size: 1.4rem;
+  background-color: #7484a0;
+  line-height: 3rem;
+}
+
+main section.projects div.project div.gallery {
+  font-size: 1.4rem;
+}
+
+main section.projects div.project div.info {
+  background-color: #7414a0;
+  font-size: 1rem;
+}
+
+main section.projects div.project div.info a {
+  color: white;
+}
+
+footer {
+  background-color: #aaa;
+}
+/*# sourceMappingURL=style.css.map */
