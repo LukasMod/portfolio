@@ -1,54 +1,87 @@
 main 
-    background-color: #666
-    section:nth-of-type(odd) div.header
-        transform: rotate(-3deg)
-    section:nth-of-type(even) div.header
-        transform: rotate(3deg)
+    background-color: $color5
+    // section:nth-of-type(odd) div.header
+    //     transform: rotate(-3deg)
+    // section:nth-of-type(even) div.header
+    //     transform: rotate(3deg)
     section
         display: flex
         flex-direction: column
         text-align: center
         overflow: hidden
+        align-items: center
+        justify-content: space-around
         div.header
-            font-size: 1.8rem
+            box-sizing: border-box
+            font-size: 1.4rem
+            padding: 3vh
+            width: 100%
             text-align: center
-            margin-top: -2vh
-            padding: 2vh
-            background-color: black
-            color: white
+            text-transform: uppercase
+            background-color: $color3
+            color: $color1
             
         div.info
             text-align: center
             padding: 2vh
             text-align: justify
+            font-weight: 300
+            background-color: $color5
+            color: $color1
 
 
     section.hello
         display: flex
         flex-direction: row
-        height: 30vh
+        position: relative
+        height: 40vh
         align-items: center
-        justify-content: space-around
+
+        justify-content: center
+        background-color: $color5
     
         div.short 
-            background-color: #304130
-            width: 50%
-            line-height: 5vh
+            box-sizing: border-box
+            background-color: $color4
+            width: 60%
+            height: 100%
+            align-self: center
             letter-spacing: 1px
-            padding: 2vh
-            text-align: center
+            padding: 20% 2vh 20% 2vh
+            border-radius: 0 10vh 0 0          
 
-        div.img
-            background-color: #30a030
-            width: 30%
+        img
+            max-width: 50%
+            max-height: 40vh
+            border-radius: 50%
+            border: 1px solid $color1
+        
+
 
     section.about
-            background-color: #0b720b
+            background-color: $color4
+            border-radius: 10vh 0 0 0 
+            div.header
+                position: relative
+                border-radius: 0 0 0 0 
+                background-color: $color2
+                color: $color5
+                          
             div.info
                 height: 20vh
                 padding-bottom: 20px
+                background-color: $color2
+                color: $color5
+
+                
+
+
+
     section.projects
-            background-color: #55c955
+            background-color: $color5
+            color: $color1
+            div.header
+                border-radius: 0 0 10vh 0 
             div.project
                 display: flex
                 flex-direction: column
@@ -58,12 +91,25 @@ main
                 
                 div.title
                     font-size: 1.4rem
-                    background-color: #7484a0
                     line-height: 3rem
                 div.gallery
                     font-size: 1.4rem
                 div.info
-                    background-color: #7414a0
                     font-size: 1rem
                     a
-                        color: white
+                        font-weight: 500
+                        color: $color1
+                        &:hover
+                            color: $color4
+    section.progress
+        position: relative
+        background-color: $color4
+        border-radius: 10vh 0 0 0 
+        div.header
+        div.progress-info    
+            border-radius: 8vh
+            overflow: hidden
+            div.info
+                width: 100%
+
+                    

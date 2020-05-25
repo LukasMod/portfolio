@@ -1,20 +1,19 @@
-html {
+body {
   font-family: oswald;
-  font-size: 2.5vh;
+  font-size: 16px;
   margin: 0;
   padding: 0;
-  height: 150vh;
+  height: 200vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-html a {
+body a {
   text-decoration: none;
   cursor: pointer;
 }
 
 header {
-  background-color: #ccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,10 +24,11 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #faf2f3;
+  color: #59171c;
 }
 
 header div {
-  background-color: #ddd;
   font-size: 1.5rem;
   padding: 20px;
   width: 30%;
@@ -59,17 +59,7 @@ header nav ul li {
 }
 
 main {
-  background-color: #666;
-}
-
-main section:nth-of-type(odd) div.header {
-  -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg);
-}
-
-main section:nth-of-type(even) div.header {
-  -webkit-transform: rotate(3deg);
-          transform: rotate(3deg);
+  background-color: #faf2f3;
 }
 
 main section {
@@ -82,21 +72,32 @@ main section {
           flex-direction: column;
   text-align: center;
   overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 main section div.header {
-  font-size: 1.8rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.4rem;
+  padding: 3vh;
+  width: 100%;
   text-align: center;
-  margin-top: -2vh;
-  padding: 2vh;
-  background-color: black;
-  color: white;
+  text-transform: uppercase;
+  background-color: #957275;
+  color: #59171c;
 }
 
 main section div.info {
   text-align: center;
   padding: 2vh;
   text-align: justify;
+  font-weight: 300;
+  background-color: #faf2f3;
+  color: #59171c;
 }
 
 main section.hello {
@@ -107,39 +108,64 @@ main section.hello {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 30vh;
+  position: relative;
+  height: 40vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #faf2f3;
 }
 
 main section.hello div.short {
-  background-color: #304130;
-  width: 50%;
-  line-height: 5vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #c6adaf;
+  width: 60%;
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   letter-spacing: 1px;
-  padding: 2vh;
-  text-align: center;
+  padding: 20% 2vh 20% 2vh;
+  border-radius: 0 10vh 0 0;
 }
 
-main section.hello div.img {
-  background-color: #30a030;
-  width: 30%;
+main section.hello img {
+  max-width: 50%;
+  max-height: 40vh;
+  border-radius: 50%;
+  border: 1px solid #59171c;
 }
 
 main section.about {
-  background-color: #0b720b;
+  background-color: #c6adaf;
+  border-radius: 10vh 0 0 0;
+}
+
+main section.about div.header {
+  position: relative;
+  border-radius: 0 0 0 0;
+  background-color: #5d3d40;
+  color: #faf2f3;
 }
 
 main section.about div.info {
   height: 20vh;
   padding-bottom: 20px;
+  background-color: #5d3d40;
+  color: #faf2f3;
 }
 
 main section.projects {
-  background-color: #55c955;
+  background-color: #faf2f3;
+  color: #59171c;
+}
+
+main section.projects div.header {
+  border-radius: 0 0 10vh 0;
 }
 
 main section.projects div.project {
@@ -156,7 +182,6 @@ main section.projects div.project {
 
 main section.projects div.project div.title {
   font-size: 1.4rem;
-  background-color: #7484a0;
   line-height: 3rem;
 }
 
@@ -165,15 +190,61 @@ main section.projects div.project div.gallery {
 }
 
 main section.projects div.project div.info {
-  background-color: #7414a0;
   font-size: 1rem;
 }
 
 main section.projects div.project div.info a {
-  color: white;
+  font-weight: 500;
+  color: #59171c;
+}
+
+main section.projects div.project div.info a:hover {
+  color: #c6adaf;
+}
+
+main section.progress {
+  position: relative;
+  background-color: #c6adaf;
+  border-radius: 10vh 0 0 0;
+}
+
+main section.progress div.progress-info {
+  border-radius: 8vh;
+  overflow: hidden;
+}
+
+main section.progress div.progress-info div.info {
+  width: 100%;
 }
 
 footer {
-  background-color: #aaa;
+  background-color: #59171c;
+  color: #faf2f3;
+}
+
+footer div.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+footer div.socials a {
+  width: 100%;
+  color: #faf2f3;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+footer div.socials a:hover {
+  background-color: #faf2f3;
+  color: #59171c;
+}
+
+footer div.rights {
+  line-height: 2rem;
+  font-size: 0.8rem;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
