@@ -6,6 +6,7 @@ body {
   height: 200vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #faf2f3;
 }
 
 body a {
@@ -77,18 +78,20 @@ main section {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 2vh;
 }
 
 main section div.header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  font-weight: 400;
   padding: 3vh;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  background-color: #957275;
-  color: #59171c;
 }
 
 main section div.info {
@@ -96,8 +99,6 @@ main section div.info {
   padding: 2vh;
   text-align: justify;
   font-weight: 300;
-  background-color: #faf2f3;
-  color: #59171c;
 }
 
 main section.hello {
@@ -117,6 +118,7 @@ main section.hello {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #faf2f3;
+  color: #59171c;
 }
 
 main section.hello div.short {
@@ -130,7 +132,7 @@ main section.hello div.short {
       align-self: center;
   letter-spacing: 1px;
   padding: 20% 2vh 20% 2vh;
-  border-radius: 0 10vh 0 0;
+  border-radius: 0 10vh 10vh 0;
 }
 
 main section.hello img {
@@ -141,22 +143,18 @@ main section.hello img {
 }
 
 main section.about {
-  background-color: #c6adaf;
-  border-radius: 10vh 0 0 0;
+  border-radius: 10vh 0 0 10vh;
+  background-color: #5d3d40;
+  color: #faf2f3;
 }
 
 main section.about div.header {
   position: relative;
-  border-radius: 0 0 0 0;
-  background-color: #5d3d40;
-  color: #faf2f3;
 }
 
 main section.about div.info {
   height: 20vh;
   padding-bottom: 20px;
-  background-color: #5d3d40;
-  color: #faf2f3;
 }
 
 main section.projects {
@@ -165,7 +163,8 @@ main section.projects {
 }
 
 main section.projects div.header {
-  border-radius: 0 0 10vh 0;
+  border-radius: 0 10vh 10vh 0;
+  background-color: #c6adaf;
 }
 
 main section.projects div.project {
@@ -176,8 +175,6 @@ main section.projects div.project {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
-  padding-bottom: 20px;
 }
 
 main section.projects div.project div.title {
@@ -195,7 +192,6 @@ main section.projects div.project div.info {
 
 main section.projects div.project div.info a {
   font-weight: 500;
-  color: #59171c;
 }
 
 main section.projects div.project div.info a:hover {
@@ -204,17 +200,28 @@ main section.projects div.project div.info a:hover {
 
 main section.progress {
   position: relative;
-  background-color: #c6adaf;
-  border-radius: 10vh 0 0 0;
+}
+
+main section.progress div.header {
+  background-color: #5d3d40;
+  color: #faf2f3;
+  border-radius: 10vh 0  0 10vh;
 }
 
 main section.progress div.progress-info {
-  border-radius: 8vh;
-  overflow: hidden;
+  top: 0;
+  left: 0;
 }
 
-main section.progress div.progress-info div.info {
-  width: 100%;
+main section.contact {
+  background-color: #faf2f3;
+  color: #59171c;
+  position: relative;
+}
+
+main section.contact div.header {
+  border-radius: 0 10vh 10vh 0;
+  background-color: #c6adaf;
 }
 
 footer {

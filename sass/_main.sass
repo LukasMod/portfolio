@@ -11,35 +11,32 @@ main
         overflow: hidden
         align-items: center
         justify-content: space-around
+        margin-bottom: 2vh
+
         div.header
             box-sizing: border-box
-            font-size: 1.4rem
+            font-size: 1.5rem
+            letter-spacing: 0.2rem
+            word-spacing: 0.5rem
+            font-weight: 400
             padding: 3vh
             width: 100%
             text-align: center
             text-transform: uppercase
-            background-color: $color3
-            color: $color1
-            
         div.info
             text-align: center
             padding: 2vh
             text-align: justify
             font-weight: 300
-            background-color: $color5
-            color: $color1
-
-
+            
     section.hello
         display: flex
         flex-direction: row
         position: relative
         height: 40vh
         align-items: center
-
         justify-content: center
-        background-color: $color5
-    
+        +colorSet1
         div.short 
             box-sizing: border-box
             background-color: $color4
@@ -48,47 +45,29 @@ main
             align-self: center
             letter-spacing: 1px
             padding: 20% 2vh 20% 2vh
-            border-radius: 0 10vh 0 0          
-
+            border-radius: 0 10vh 10vh 0          
         img
             max-width: 50%
             max-height: 40vh
             border-radius: 50%
             border: 1px solid $color1
-        
-
-
     section.about
-            background-color: $color4
-            border-radius: 10vh 0 0 0 
+            border-radius: 10vh 0 0 10vh 
+            +colorSet2
             div.header
                 position: relative
-                border-radius: 0 0 0 0 
-                background-color: $color2
-                color: $color5
-                          
             div.info
                 height: 20vh
                 padding-bottom: 20px
-                background-color: $color2
-                color: $color5
-
-                
-
-
-
     section.projects
-            background-color: $color5
-            color: $color1
+            +colorSet1
             div.header
-                border-radius: 0 0 10vh 0 
+                border-radius: 0 10vh 10vh 0 
+                background-color: $color4
+
             div.project
                 display: flex
-                flex-direction: column
-
-                text-align: center
-                padding-bottom: 20px
-                
+                flex-direction: column                
                 div.title
                     font-size: 1.4rem
                     line-height: 3rem
@@ -98,18 +77,25 @@ main
                     font-size: 1rem
                     a
                         font-weight: 500
-                        color: $color1
                         &:hover
                             color: $color4
     section.progress
         position: relative
-        background-color: $color4
-        border-radius: 10vh 0 0 0 
         div.header
+            +colorSet2
+            border-radius: 10vh 0  0 10vh 
         div.progress-info    
-            border-radius: 8vh
-            overflow: hidden
-            div.info
-                width: 100%
+            top: 0
+            left: 0
+                        
+    section.contact
+        +colorSet1
+        position: relative
+        div.header
+            border-radius:  0 10vh 10vh 0 
+            background-color: $color4
+            
+           
 
-                    
+
+                  
