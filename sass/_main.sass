@@ -52,38 +52,45 @@ main
             border-radius: 50%
             border: 1px solid $color1
     section.about
-            border-radius: 10vh 0 0 10vh 
-            +colorSet2
-            div.header
-                position: relative
-            div.info
-                height: 20vh
-                padding-bottom: 20px
+        border-radius: 10vh 0 0 10vh
+        +colorSet2
+        div.header
+            position: relative
+        div.info
+            height: 20vh
+            padding-bottom: 20px
     section.projects
-            +colorSet1
-            div.header
-                border-radius: 0 10vh 10vh 0 
-                background-color: $color4
+        +colorSet1
+        div.header
+            border-radius: 0 10vh 10vh 0 
+            background-color: $color4
 
-            div.project
-                display: flex
-                flex-direction: column                
-                div.title
-                    font-size: 1.4rem
-                    line-height: 3rem
-                div.gallery
-                    font-size: 1.4rem
-                div.info
-                    font-size: 1rem
-                    a
-                        font-weight: 500
-                        &:hover
-                            color: $color4
+        div.project
+            display: flex
+            flex-direction: column                
+            .title
+                font-size: 1.4rem
+                line-height: 3rem
+                
+            div.images
+                img
+                    width: 50%
+                    padding: 2px
+                    box-shadow: 0px 0px 5px 0px $color1 
+                    border: 1px solid $color1 
+                    border-radius: 10%
+                    cursor: pointer
+            div.info
+                font-size: 1rem
+                a
+                    font-weight: 500
+                    &:hover
+                        color: $color4    
     section.progress
         position: relative
         div.header
             +colorSet2
-            border-radius: 10vh 0  0 10vh 
+            border-radius: 10vh 0  0 10vh
         div.progress-info    
             top: 0
             left: 0
@@ -92,10 +99,9 @@ main
         +colorSet1
         position: relative
         div.header
-            border-radius:  0 10vh 10vh 0 
+            border-radius: 0 10vh 10vh 0 
             background-color: $color4
             
            
 
 
-                  

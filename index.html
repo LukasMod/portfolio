@@ -9,19 +9,23 @@
     <!-- "Font Awesome by Dave Gandy - http://fontawesome.io" -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="dist/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
     <header>
-        <div class='name'>Łukasz Modzelewski</div>
-        <nav>
-            <ul>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Progress</li>
-                <li>Contact</li>
-            </ul>
+        <div data-section='about' class='name'>Łukasz Modzelewski</div>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-angle-up off"></i>
+        </div>
+        <nav class="off">
+            <a a-section='about' class='about'>About</a>
+            <a a-section='projects' class='projects'>Projects</a>
+            <a a-section='progress' class='progress'>Progress</a>
+            <a a-section='contact' class='contact'>Contact</a>
         </nav>
     </header>
     <main>
@@ -40,18 +44,29 @@
                 I love learning, so I decided to try to build something completely different.
                 Time to build code with engineering precision.</div>
         </section>
-        <section class='projects'>
+        <section data-section='projects' class='projects'>
             <div class='header'>Projects</div>
 
             <div class='project'>
                 <div class='title'>SpaceRunner The Game</div>
-                <div class='gallery'>Future Gallery</div>
+                <div class="images">
+                    <a data-lightbox="www" href="img/imgSpaceRunner/image1.PNG" data-title="Main page">
+                        <img src="img/imgSpaceRunner/image1.PNG"></a>
+                    <a href="img/imgSpaceRunner/image2.PNG" data-lightbox="www" data-title="Scoreboard"></a>
+                    <a href="img/imgSpaceRunner/image3.PNG" data-lightbox="www" data-title="Change language ENG"></a>
+                    <a href="img/imgSpaceRunner/image4.PNG" data-lightbox="www" data-title="Change language PL"></a>
+                    <a href="img/imgSpaceRunner/image5.PNG" data-lightbox="www" data-title="Gameplay"></a>
+                    <a href="img/imgSpaceRunner/image6.PNG" data-lightbox="www" data-title="Save score"></a>
+                    <a href="img/imgSpaceRunner/image7.PNG" data-lightbox="www"
+                        data-title="Scoreboard update after games"></a>
+                    <a href="img/imgSpaceRunner/image8.PNG" data-lightbox="www" data-title="Gameplay"></a>
+                </div>
                 <div class='info'>Flying and shooting meteors.
                     Partly based on youtube tutorial made by user: javacraving.
                     Read more on <a href='https://github.com/LukasMod/SpaceRunner'>Github</a>
                 </div>
         </section>
-        <section class='progress'>
+        <section data-section='progress' class='progress'>
 
             <div class='header'>Progress</div>
             <div class='progress-info'>
@@ -74,9 +89,24 @@
                 </div>
             </div>
         </section>
-        <section class='contact'>
+        <section data-section='contact' class='contact'>
             <div class='header'>Contact</div>
             <div class='info'>A contact form will appear here in the near future.</div>
+            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sequi, dicta ea excepturi, magnam
+                nemo explicabo repellendus facere reiciendis fugiat accusantium beatae aut. Recusandae excepturi ducimus
+                mollitia delectus repudiandae aliquam.
+                Consequuntur, eligendi obcaecati nam error dicta saepe consequatur cumque minus praesentium? Iste
+                repellat molestiae voluptate, aliquam error illo quo veritatis doloribus perspiciatis modi ea, ipsam id
+                adipisci expedita, voluptatibus temporibus.
+                Quibusdam nemo corrupti odio natus voluptas. Dolorum quisquam repellendus fuga. Perferendis, mollitia
+                eaque ex ratione facilis libero dignissimos soluta tempore dolore officia officiis, deserunt vitae
+                autem, blanditiis dicta vero veritatis?
+                Consequuntur, eligendi obcaecati nam error dicta saepe consequatur cumque minus praesentium? Iste
+                repellat molestiae voluptate, aliquam error illo quo veritatis doloribus perspiciatis modi ea, ipsam id
+                adipisci expedita, voluptatibus temporibus.
+                Quibusdam nemo corrupti odio natus voluptas. Dolorum quisquam repellendus fuga. Perferendis, mollitia
+                eaque ex ratione facilis libero dignissimos soluta tempore dolore officia officiis, deserunt vitae
+                autem, blanditiis dicta vero veritatis?</div>
         </section>
     </main>
     <footer>
@@ -88,6 +118,9 @@
         </div>
         <div class='rights'>© ŁM All rights reserved</div>
     </footer>
+    <script src="src/jquery-3.2.1.min.js"></script>
+    <script src="dist/js/lightbox.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

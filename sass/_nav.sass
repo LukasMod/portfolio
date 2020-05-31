@@ -5,20 +5,56 @@ header
     background-color: $color5
     color: $color1
 
-    div
+    div.name
         font-size: 1.5rem
         padding: 20px
         width: 30%
-    nav
-        width: 60%
+    i.fas   
+        position: fixed
+        right: 1.5vh
+        top: 5vh
+        height: 5vh
         padding: 10px
-        ul
-            list-style: none
-            display: flex
-            align-items: center
-            flex-direction: column
+        font-size: 2rem
+        z-index: 2
+        border: 1px solid $color1
+        border-radius: 50%
+        transition: .2s
+    i
+        &.fa-bars:active
+            border: 2px solid $color1 
+        &.fa-angle-up 
+            top: 11vh
+            right: 7.5vh
+            transform: translate(50%, 50%)
+            color: $color5
+            border: none
+            &:active
+                color: $color1
+        &.off 
+            display: none
             
-            li
-                margin-left: auto
-                margin-right: auto
-                // padding: 5vh
+    nav 
+        position: fixed
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        right: 0
+        top: 0
+        width: 15vh
+        height: 22vh
+        +colorSet2()
+        border-radius: 0 0  0 25%
+        z-index: 1
+        opacity: 0.9
+        transition: .2s
+        a
+            margin-top: 0.5vh
+        a.active
+            color: $color4
+            border-bottom: 1px solid $color4
+            
+
+    nav.off 
+        top: -25vh
