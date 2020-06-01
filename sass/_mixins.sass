@@ -4,5 +4,33 @@
 =colorSet2()
     background-color: $color2
     color: $color5
-
+    +respond(xs)
     
+    +respond(s)
+        background-color: yellow
+    +respond(m)
+        background-color: red
+    +respond(l)
+        background-color: orange
+    +respond(xl)
+        background-color: blue
+    
+    // @media (max-width: 900px) 
+    //     background-color: blue
+ 
+=respond($breakpoint)
+    @if($breakpoint == xs)  
+      @media (max-width: 600px) 
+           @content 
+    @if($breakpoint == s)  
+      @media (min-width: 600px) 
+           @content 
+    @if($breakpoint == m)  
+      @media (min-width: 768px) 
+           @content
+    @if($breakpoint == l)  
+      @media (min-width: 992px)
+           @content 
+    @if($breakpoint == xl)  
+      @media (min-width: 1200px)
+           @content 

@@ -18,14 +18,14 @@ function changeDot() {
     const heightS2 = $('section.projects').offset().top;
     const heightS3 = $('section.progress').offset().top;
     const heightS4 = $('section.contact').offset().top;
-
-    if (scrollValue < heightS2-100) {
+    
+    if (scrollValue + 1 < heightS2) {
         $('header nav a').not('a.about').removeClass('active');
         $('a.about').addClass('active')
-    } else if (scrollValue < heightS3-100) {
+    } else if (scrollValue + 1 < heightS3) {
         $('header nav a').not('a.projects').removeClass('active');
         $('a.projects').addClass('active');
-    } else if (scrollValue < heightS4-100) {
+    } else if (scrollValue + 1 < heightS4) {
         $('header nav a').not('a.progress').removeClass('active');
         $('a.progress').addClass('active');
     } else {

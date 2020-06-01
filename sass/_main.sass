@@ -1,9 +1,5 @@
 main 
     background-color: $color5
-    // section:nth-of-type(odd) div.header
-    //     transform: rotate(-3deg)
-    // section:nth-of-type(even) div.header
-    //     transform: rotate(3deg)
     section
         display: flex
         flex-direction: column
@@ -11,23 +7,33 @@ main
         overflow: hidden
         align-items: center
         justify-content: space-around
+        margin-top: 2vh
         margin-bottom: 2vh
 
         div.header
             box-sizing: border-box
-            font-size: 1.5rem
-            letter-spacing: 0.2rem
-            word-spacing: 0.5rem
+            font-size: 1.5em
+            letter-spacing: 0.15em
+            word-spacing: 0.5em
             font-weight: 400
-            padding: 3vh
+            padding: 2vh
             width: 100%
             text-align: center
             text-transform: uppercase
         div.info
+            box-sizing: border-box
+            width: 100%
             text-align: center
             padding: 2vh
             text-align: justify
             font-weight: 300
+            +respond(m)
+                width: 90%
+            +respond(l)
+                width: 75%
+            +respond(xl)
+                width: 50%
+
             
     section.hello
         display: flex
@@ -35,30 +41,34 @@ main
         position: relative
         height: 40vh
         align-items: center
-        justify-content: center
+
         +colorSet1
         div.short 
             box-sizing: border-box
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
             background-color: $color4
             width: 60%
             height: 100%
-            align-self: center
-            letter-spacing: 1px
-            padding: 20% 2vh 20% 2vh
+            letter-spacing: 0.05em
+            padding: 2vh 2vh 2vh 2vh
             border-radius: 0 10vh 10vh 0          
         img
-            max-width: 50%
-            max-height: 40vh
+            max-width: 40%
+            max-height: 95%
             border-radius: 50%
             border: 1px solid $color1
+
     section.about
         border-radius: 10vh 0 0 10vh
         +colorSet2
         div.header
             position: relative
         div.info
-            height: 20vh
-            padding-bottom: 20px
+            height: 23vh
+            padding-top: 0
     section.projects
         +colorSet1
         div.header
@@ -69,8 +79,8 @@ main
             display: flex
             flex-direction: column                
             .title
-                font-size: 1.4rem
-                line-height: 3rem
+                font-size: 1.4em
+                line-height: 3em
                 
             div.images
                 img
@@ -81,9 +91,10 @@ main
                     border-radius: 10%
                     cursor: pointer
             div.info
-                font-size: 1rem
+                font-size: 1em
                 a
                     font-weight: 500
+                    color: $color1  
                     &:hover
                         color: $color4    
     section.progress
@@ -101,7 +112,8 @@ main
         div.header
             border-radius: 0 10vh 10vh 0 
             background-color: $color4
+        div.contact-form
+            width: 100%
+            height: 70vh
             
-           
-
-
+        

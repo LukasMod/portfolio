@@ -9,6 +9,30 @@ body {
   background-color: #faf2f3;
 }
 
+@media (min-width: 600px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 36px;
+  }
+}
+
 body a {
   text-decoration: none;
   cursor: pointer;
@@ -25,12 +49,13 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 8em;
   background-color: #faf2f3;
   color: #59171c;
 }
 
 header div.name {
-  font-size: 1.5rem;
+  font-size: 2em;
   padding: 20px;
   width: 30%;
 }
@@ -39,9 +64,8 @@ header i.fas {
   position: fixed;
   right: 1.5vh;
   top: 5vh;
-  height: 5vh;
-  padding: 10px;
-  font-size: 2rem;
+  padding: 0.5em;
+  font-size: 2em;
   z-index: 2;
   border: 1px solid #59171c;
   border-radius: 50%;
@@ -54,12 +78,13 @@ header i.fa-bars:active {
 }
 
 header i.fa-angle-up {
-  top: 11vh;
+  top: 15vh;
   right: 7.5vh;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
   color: #faf2f3;
   border: none;
+  padding: 0;
 }
 
 header i.fa-angle-up:active {
@@ -98,6 +123,30 @@ header nav {
   transition: .2s;
 }
 
+@media (min-width: 600px) {
+  header nav {
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 768px) {
+  header nav {
+    background-color: red;
+  }
+}
+
+@media (min-width: 992px) {
+  header nav {
+    background-color: orange;
+  }
+}
+
+@media (min-width: 1200px) {
+  header nav {
+    background-color: blue;
+  }
+}
+
 header nav a {
   margin-top: 0.5vh;
 }
@@ -130,27 +179,49 @@ main section {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 2vh;
   margin-bottom: 2vh;
 }
 
 main section div.header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 1.5rem;
-  letter-spacing: 0.2rem;
-  word-spacing: 0.5rem;
+  font-size: 1.5em;
+  letter-spacing: 0.15em;
+  word-spacing: 0.5em;
   font-weight: 400;
-  padding: 3vh;
+  padding: 2vh;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
 }
 
 main section div.info {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
   text-align: center;
   padding: 2vh;
   text-align: justify;
   font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  main section div.info {
+    width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  main section div.info {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main section div.info {
+    width: 50%;
+  }
 }
 
 main section.hello {
@@ -166,9 +237,6 @@ main section.hello {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: #faf2f3;
   color: #59171c;
 }
@@ -176,20 +244,30 @@ main section.hello {
 main section.hello div.short {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #c6adaf;
   width: 60%;
   height: 100%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  letter-spacing: 1px;
-  padding: 20% 2vh 20% 2vh;
+  letter-spacing: 0.05em;
+  padding: 2vh 2vh 2vh 2vh;
   border-radius: 0 10vh 10vh 0;
 }
 
 main section.hello img {
-  max-width: 50%;
-  max-height: 40vh;
+  max-width: 40%;
+  max-height: 95%;
   border-radius: 50%;
   border: 1px solid #59171c;
 }
@@ -200,13 +278,37 @@ main section.about {
   color: #faf2f3;
 }
 
+@media (min-width: 600px) {
+  main section.about {
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 768px) {
+  main section.about {
+    background-color: red;
+  }
+}
+
+@media (min-width: 992px) {
+  main section.about {
+    background-color: orange;
+  }
+}
+
+@media (min-width: 1200px) {
+  main section.about {
+    background-color: blue;
+  }
+}
+
 main section.about div.header {
   position: relative;
 }
 
 main section.about div.info {
-  height: 20vh;
-  padding-bottom: 20px;
+  height: 23vh;
+  padding-top: 0;
 }
 
 main section.projects {
@@ -230,8 +332,8 @@ main section.projects div.project {
 }
 
 main section.projects div.project .title {
-  font-size: 1.4rem;
-  line-height: 3rem;
+  font-size: 1.4em;
+  line-height: 3em;
 }
 
 main section.projects div.project div.images img {
@@ -245,11 +347,12 @@ main section.projects div.project div.images img {
 }
 
 main section.projects div.project div.info {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 main section.projects div.project div.info a {
   font-weight: 500;
+  color: #59171c;
 }
 
 main section.projects div.project div.info a:hover {
@@ -264,6 +367,30 @@ main section.progress div.header {
   background-color: #5d3d40;
   color: #faf2f3;
   border-radius: 10vh 0  0 10vh;
+}
+
+@media (min-width: 600px) {
+  main section.progress div.header {
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 768px) {
+  main section.progress div.header {
+    background-color: red;
+  }
+}
+
+@media (min-width: 992px) {
+  main section.progress div.header {
+    background-color: orange;
+  }
+}
+
+@media (min-width: 1200px) {
+  main section.progress div.header {
+    background-color: blue;
+  }
 }
 
 main section.progress div.progress-info {
@@ -282,6 +409,11 @@ main section.contact div.header {
   background-color: #c6adaf;
 }
 
+main section.contact div.contact-form {
+  width: 100%;
+  height: 70vh;
+}
+
 footer {
   background-color: #59171c;
   color: #faf2f3;
@@ -291,7 +423,7 @@ footer div.socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 footer div.socials a {
@@ -308,8 +440,8 @@ footer div.socials a:hover {
 }
 
 footer div.rights {
-  line-height: 2rem;
-  font-size: 0.8rem;
+  line-height: 2em;
+  font-size: 0.8em;
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
