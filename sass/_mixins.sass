@@ -14,23 +14,30 @@
         background-color: orange
     +respond(xl)
         background-color: blue
+    +respond(xxl)
+        background-color: darkblue
     
     // @media (max-width: 900px) 
     //     background-color: blue
  
 =respond($breakpoint)
     @if($breakpoint == xs)  
-      @media (max-width: 600px) 
+      @media only screen and (max-width: 600px)
            @content 
     @if($breakpoint == s)  
-      @media (min-width: 600px) 
+      @media only screen and (min-width: 600px)
            @content 
     @if($breakpoint == m)  
-      @media (min-width: 768px) 
+      @media only screen and (min-width: 768px)
            @content
     @if($breakpoint == l)  
-      @media (min-width: 992px)
+      @media only screen and (min-width: 992px)
            @content 
     @if($breakpoint == xl)  
-      @media (min-width: 1200px)
+      @media only screen and (min-width: 1200px)
            @content 
+    @if($breakpoint == xxl)  
+      @media only screen and (min-width: 2000px)
+           @content 
+
+

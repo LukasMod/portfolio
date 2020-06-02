@@ -2,14 +2,19 @@ header
     display: flex
     flex-direction: row
     justify-content: space-between
-    height: 8em
+    position: relative
+    height: 15vh
     background-color: $color5
     color: $color1
+    width: 100%
 
     div.name
+        position: absolute
         font-size: 2em
-        padding: 20px
-        width: 30%
+        padding: 5vmin
+        width: 70%
+        
+
     i.fas   
         position: fixed
         right: 1.5vh
@@ -24,7 +29,7 @@ header
         &.fa-bars:active
             border: 2px solid $color1 
         &.fa-angle-up 
-            top: 15vh
+            top: 16vh
             right: 7.5vh
             transform: translate(50%, 50%)
             color: $color5
@@ -45,7 +50,7 @@ header
         right: 0
         top: 0
         width: 15vh
-        height: 22vh
+        height: 25vh
         +colorSet2()
         border-radius: 0 0  0 25%
         z-index: 1

@@ -1,5 +1,8 @@
 main 
     background-color: $color5
+    display: flex
+    flex-direction: row
+
     section
         display: flex
         flex-direction: column
@@ -24,15 +27,15 @@ main
             box-sizing: border-box
             width: 100%
             text-align: center
-            padding: 2vh
+            padding: 3vh
             text-align: justify
             font-weight: 300
-            +respond(m)
-                width: 90%
-            +respond(l)
-                width: 75%
-            +respond(xl)
-                width: 50%
+            // +respond(m)
+            //     width: 90%
+            // +respond(l)
+            //     width: 75%
+            // +respond(xl)
+            //     width: 50%
 
             
     section.hello
@@ -41,6 +44,8 @@ main
         position: relative
         height: 40vh
         align-items: center
+        justify-content: space-between
+        margin-top: 0
 
         +colorSet1
         div.short 
@@ -51,9 +56,9 @@ main
             justify-content: center
             background-color: $color4
             width: 60%
-            height: 100%
+            height: 75%
             letter-spacing: 0.05em
-            padding: 2vh 2vh 2vh 2vh
+            padding: 2vmin 2vmin 2vmin 2vmin
             border-radius: 0 10vh 10vh 0          
         img
             max-width: 40%
@@ -67,7 +72,7 @@ main
         div.header
             position: relative
         div.info
-            height: 23vh
+            height: auto
             padding-top: 0
     section.projects
         +colorSet1
@@ -105,6 +110,8 @@ main
         div.progress-info    
             top: 0
             left: 0
+            width: 80%
+
                         
     section.contact
         +colorSet1

@@ -3,27 +3,31 @@
 
 body 
        font-family: oswald
-       font-size: 16px
+       font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)))
        margin: 0
        padding: 0
        height: 200vh
        box-sizing: border-box
        background-color: $color5
-       +respond(xs)
-    
-       +respond(s)
-        font-size: 20px
-       +respond(m)
-        font-size: 24px
-       +respond(l)
-        font-size: 28px
-       +respond(xl)
-        font-size: 36px
+
+       // +respond(xs)
+       // +respond(s)
+       //  font-size: 16px
+       // +respond(m)
+       //  font-size: 18px
+       // +respond(l)
+       //  font-size: 20px
+       // +respond(xl)
+       //  font-size: 24px
        a
               text-decoration: none
               cursor: pointer
 
 
+
 @import 'nav'
 @import 'main'
 @import 'footer'
+@import 'media'
+
+    

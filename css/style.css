@@ -1,36 +1,12 @@
 body {
   font-family: oswald;
-  font-size: 16px;
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
   margin: 0;
   padding: 0;
   height: 200vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #faf2f3;
-}
-
-@media (min-width: 600px) {
-  body {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  body {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 992px) {
-  body {
-    font-size: 28px;
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    font-size: 36px;
-  }
 }
 
 body a {
@@ -49,15 +25,18 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 8em;
+  position: relative;
+  height: 15vh;
   background-color: #faf2f3;
   color: #59171c;
+  width: 100%;
 }
 
 header div.name {
+  position: absolute;
   font-size: 2em;
-  padding: 20px;
-  width: 30%;
+  padding: 5vmin;
+  width: 70%;
 }
 
 header i.fas {
@@ -78,7 +57,7 @@ header i.fa-bars:active {
 }
 
 header i.fa-angle-up {
-  top: 15vh;
+  top: 16vh;
   right: 7.5vh;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
@@ -113,7 +92,7 @@ header nav {
   right: 0;
   top: 0;
   width: 15vh;
-  height: 22vh;
+  height: 25vh;
   background-color: #5d3d40;
   color: #faf2f3;
   border-radius: 0 0  0 25%;
@@ -123,27 +102,33 @@ header nav {
   transition: .2s;
 }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   header nav {
     background-color: yellow;
   }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   header nav {
     background-color: red;
   }
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   header nav {
     background-color: orange;
   }
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   header nav {
     background-color: blue;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  header nav {
+    background-color: darkblue;
   }
 }
 
@@ -162,6 +147,13 @@ header nav.off {
 
 main {
   background-color: #faf2f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 main section {
@@ -201,27 +193,9 @@ main section div.info {
           box-sizing: border-box;
   width: 100%;
   text-align: center;
-  padding: 2vh;
+  padding: 3vh;
   text-align: justify;
   font-weight: 300;
-}
-
-@media (min-width: 768px) {
-  main section div.info {
-    width: 90%;
-  }
-}
-
-@media (min-width: 992px) {
-  main section div.info {
-    width: 75%;
-  }
-}
-
-@media (min-width: 1200px) {
-  main section div.info {
-    width: 50%;
-  }
 }
 
 main section.hello {
@@ -237,6 +211,10 @@ main section.hello {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0;
   background-color: #faf2f3;
   color: #59171c;
 }
@@ -259,9 +237,9 @@ main section.hello div.short {
           justify-content: center;
   background-color: #c6adaf;
   width: 60%;
-  height: 100%;
+  height: 75%;
   letter-spacing: 0.05em;
-  padding: 2vh 2vh 2vh 2vh;
+  padding: 2vmin 2vmin 2vmin 2vmin;
   border-radius: 0 10vh 10vh 0;
 }
 
@@ -278,27 +256,33 @@ main section.about {
   color: #faf2f3;
 }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   main section.about {
     background-color: yellow;
   }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   main section.about {
     background-color: red;
   }
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   main section.about {
     background-color: orange;
   }
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   main section.about {
     background-color: blue;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  main section.about {
+    background-color: darkblue;
   }
 }
 
@@ -307,7 +291,7 @@ main section.about div.header {
 }
 
 main section.about div.info {
-  height: 23vh;
+  height: auto;
   padding-top: 0;
 }
 
@@ -369,33 +353,40 @@ main section.progress div.header {
   border-radius: 10vh 0  0 10vh;
 }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   main section.progress div.header {
     background-color: yellow;
   }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   main section.progress div.header {
     background-color: red;
   }
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   main section.progress div.header {
     background-color: orange;
   }
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   main section.progress div.header {
     background-color: blue;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  main section.progress div.header {
+    background-color: darkblue;
   }
 }
 
 main section.progress div.progress-info {
   top: 0;
   left: 0;
+  width: 80%;
 }
 
 main section.contact {
@@ -443,5 +434,118 @@ footer div.rights {
   line-height: 2em;
   font-size: 0.8em;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    left: 5vw;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header {
+    left: 10vw;
+    right: 60%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    left: 18vw;
+    right: 60%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header i.fas {
+    right: 10vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header i.fas {
+    right: 13vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header i.fas {
+    right: 18vmax;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header i.fas.fa-angle-up {
+    top: 18vw;
+    right: 8vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header i.fas.fa-angle-up {
+    top: 13vw;
+    right: 6vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header i.fas.fa-angle-up {
+    top: 9vw;
+    right: 4vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  aside {
+    -ms-flex-preferred-size: 0%;
+        flex-basis: 0%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  aside {
+    -ms-flex-preferred-size: 0%;
+        flex-basis: 0%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  aside {
+    -ms-flex-preferred-size: 30vw;
+        flex-basis: 30vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  aside {
+    -ms-flex-preferred-size: 35vw;
+        flex-basis: 35vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  aside {
+    -ms-flex-preferred-size: 40vw;
+        flex-basis: 40vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main section div.info {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  main section div.info {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main section div.info {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

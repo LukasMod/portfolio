@@ -1,0 +1,49 @@
+header    
+    +respond(m)
+        left: 5vw
+        width: 60%
+    +respond(l)
+        left: 10vw
+        right: 60%
+    +respond(xl)
+        left: 18vw
+        right: 60%
+
+    i.fas   
+        +respond(m)
+            right: 10vw
+        +respond(l)
+            right: 13vw
+        +respond(xl)
+            right: 18vmax
+        &.fa-angle-up 
+            +respond(m)
+                top: 18vw
+                right: 8vw
+            +respond(l)
+                top: 13vw
+                right: 6vw
+            +respond(xl)
+                top: 9vw
+                right: 4vw
+    
+aside
+    +respond(xs)
+        flex-basis: 0%
+    +respond(s)
+       flex-basis: 0%
+    +respond(m)
+       flex-basis: 30vw
+    +respond(l)
+       flex-basis: 35vw
+    +respond(xl)
+       flex-basis: 40vw
+main 
+    section
+        div.info
+            +respond(m)
+                width: 90%
+            +respond(l)
+                width: 75%
+            +respond(xl)
+                width: 50%
