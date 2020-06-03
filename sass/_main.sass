@@ -13,7 +13,7 @@ main
         margin-top: 2vh
         margin-bottom: 2vh
 
-        div.header
+        .header
             box-sizing: border-box
             font-size: 1.5em
             letter-spacing: 0.15em
@@ -23,7 +23,7 @@ main
             width: 100%
             text-align: center
             text-transform: uppercase
-        div.info
+        .info
             box-sizing: border-box
             width: 100%
             text-align: center
@@ -48,7 +48,7 @@ main
         margin-top: 0
 
         +colorSet1
-        div.short 
+        .short 
             box-sizing: border-box
             display: flex
             flex-direction: column
@@ -69,25 +69,25 @@ main
     section.about
         border-radius: 10vh 0 0 10vh
         +colorSet2
-        div.header
+        .header
             position: relative
-        div.info
+        .info
             height: auto
             padding-top: 0
     section.projects
         +colorSet1
-        div.header
+        .header
             border-radius: 0 10vh 10vh 0 
             background-color: $color4
 
-        div.project
+        .project
             display: flex
             flex-direction: column                
             .title
                 font-size: 1.4em
                 line-height: 3em
                 
-            div.images
+            .images
                 img
                     width: 50%
                     padding: 2px
@@ -104,10 +104,10 @@ main
                         color: $color4    
     section.progress
         position: relative
-        div.header
+        .header
             +colorSet2
             border-radius: 10vh 0  0 10vh
-        div.progress-info    
+        .progress-info    
             top: 0
             left: 0
             width: 80%
@@ -116,10 +116,10 @@ main
     section.contact
         +colorSet1
         position: relative
-        div.header
+        .header
             border-radius: 0 10vh 10vh 0 
             background-color: $color4
-        div.contact-form
+        .contact-form
             width: 100%
             height: 70vh
             

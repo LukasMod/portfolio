@@ -8,59 +8,63 @@ header
     color: $color1
     width: 100%
 
-    div.name
+    .name
         position: absolute
         font-size: 2em
         padding: 5vmin
         width: 70%
-        
-
-    i.fas   
-        position: fixed
-        right: 1.5vh
-        top: 5vh
-        padding: 0.5em
-        font-size: 2em
-        z-index: 2
-        border: 1px solid $color1
-        border-radius: 50%
-        transition: .2s
-    i
-        &.fa-bars:active
-            border: 2px solid $color1 
-        &.fa-angle-up 
-            top: 16vh
-            right: 7.5vh
-            transform: translate(50%, 50%)
-            color: $color5
-            border: none
-            padding: 0
-
-            &:active
-                color: $color1
-        &.off 
-            display: none
             
     nav 
         position: fixed
         display: flex
         flex-direction: column
         align-items: center
-        justify-content: flex-start
+        // justify-content: flex-start
+        box-sizing: border-box
         right: 0
         top: 0
-        width: 15vh
-        height: 25vh
+        width: 25vw
         +colorSet2()
         border-radius: 0 0  0 25%
         z-index: 1
         opacity: 0.9
         transition: .2s
+        padding: 3vh
+
         a
             margin-top: 0.5vh
         a.active
             color: $color4
             border-bottom: 1px solid $color4
+        i.fas   
+            position: absolute
+            right: 20%
+            top: calc(25vh + 20px)
+            padding: 0.5em
+            font-size: 2em
+            width: 1.05em
+            height: 1.05em
+            line-height: 1em
+            text-align: center
+            z-index: 2
+            border: 1px solid $color1
+            border-radius: 50%
+            +colorSet1()
+            transition: .2s
+        i
+            &.fa-bars:active
+                border: 2px solid $color1 
+            &.fa-angle-up 
+                font-size: 2em
+                top: calc(22vh + 20px)
+                border: none
+                
+
+                &:active
+                    color: $color1
+            &.off 
+                display: none
+                
             
 
     nav.off 

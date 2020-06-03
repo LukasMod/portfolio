@@ -9,24 +9,16 @@ header
         left: 18vw
         right: 60%
 
-    i.fas   
+    nav
         +respond(m)
+            width: 30%
             right: 10vw
+            border-radius: 0 0  40% 50%
         +respond(l)
-            right: 13vw
+            width: 75%
         +respond(xl)
-            right: 18vmax
-        &.fa-angle-up 
-            +respond(m)
-                top: 18vw
-                right: 8vw
-            +respond(l)
-                top: 13vw
-                right: 6vw
-            +respond(xl)
-                top: 9vw
-                right: 4vw
-    
+            width: 50%
+
 aside
     +respond(xs)
         flex-basis: 0%
@@ -38,12 +30,34 @@ aside
        flex-basis: 35vw
     +respond(xl)
        flex-basis: 40vw
-main 
+main
     section
-        div.info
-            +respond(m)
-                width: 90%
-            +respond(l)
-                width: 75%
-            +respond(xl)
-                width: 50%
+        div.header
+            border-radius: 10vh
+            // div.header
+            //     border-radius: 10vh
+            // div.info
+            //     +respond(m)
+            //         width: 90%
+            //     +respond(l)
+            //         width: 75%
+            //     +respond(xl)
+            //         width: 50%
+
+
+main
+    section
+        // &.about
+        //     div.header
+        //         border-radius: 10vh
+        &.projects
+            div.header
+                border-radius: 10vh
+        &.progress
+            div.header
+                border-radius: 10vh
+        &.contacts 
+            div.header
+                border-radius: 10vh
+
+

@@ -32,46 +32,11 @@ header {
   width: 100%;
 }
 
-header div.name {
+header .name {
   position: absolute;
   font-size: 2em;
   padding: 5vmin;
   width: 70%;
-}
-
-header i.fas {
-  position: fixed;
-  right: 1.5vh;
-  top: 5vh;
-  padding: 0.5em;
-  font-size: 2em;
-  z-index: 2;
-  border: 1px solid #59171c;
-  border-radius: 50%;
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-
-header i.fa-bars:active {
-  border: 2px solid #59171c;
-}
-
-header i.fa-angle-up {
-  top: 16vh;
-  right: 7.5vh;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
-  color: #faf2f3;
-  border: none;
-  padding: 0;
-}
-
-header i.fa-angle-up:active {
-  color: #59171c;
-}
-
-header i.off {
-  display: none;
 }
 
 header nav {
@@ -86,13 +51,11 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   right: 0;
   top: 0;
-  width: 15vh;
-  height: 25vh;
+  width: 25vw;
   background-color: #5d3d40;
   color: #faf2f3;
   border-radius: 0 0  0 25%;
@@ -100,6 +63,7 @@ header nav {
   opacity: 0.9;
   -webkit-transition: .2s;
   transition: .2s;
+  padding: 3vh;
 }
 
 @media only screen and (min-width: 600px) {
@@ -141,6 +105,43 @@ header nav a.active {
   border-bottom: 1px solid #c6adaf;
 }
 
+header nav i.fas {
+  position: absolute;
+  right: 20%;
+  top: calc(25vh + 20px);
+  padding: 0.5em;
+  font-size: 2em;
+  width: 1.05em;
+  height: 1.05em;
+  line-height: 1em;
+  text-align: center;
+  z-index: 2;
+  border: 1px solid #59171c;
+  border-radius: 50%;
+  background-color: #faf2f3;
+  color: #59171c;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+header nav i.fa-bars:active {
+  border: 2px solid #59171c;
+}
+
+header nav i.fa-angle-up {
+  font-size: 2em;
+  top: calc(22vh + 20px);
+  border: none;
+}
+
+header nav i.fa-angle-up:active {
+  color: #59171c;
+}
+
+header nav i.off {
+  display: none;
+}
+
 header nav.off {
   top: -25vh;
 }
@@ -175,7 +176,7 @@ main section {
   margin-bottom: 2vh;
 }
 
-main section div.header {
+main section .header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 1.5em;
@@ -188,7 +189,7 @@ main section div.header {
   text-transform: uppercase;
 }
 
-main section div.info {
+main section .info {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -219,7 +220,7 @@ main section.hello {
   color: #59171c;
 }
 
-main section.hello div.short {
+main section.hello .short {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -286,11 +287,11 @@ main section.about {
   }
 }
 
-main section.about div.header {
+main section.about .header {
   position: relative;
 }
 
-main section.about div.info {
+main section.about .info {
   height: auto;
   padding-top: 0;
 }
@@ -300,12 +301,12 @@ main section.projects {
   color: #59171c;
 }
 
-main section.projects div.header {
+main section.projects .header {
   border-radius: 0 10vh 10vh 0;
   background-color: #c6adaf;
 }
 
-main section.projects div.project {
+main section.projects .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,12 +316,12 @@ main section.projects div.project {
           flex-direction: column;
 }
 
-main section.projects div.project .title {
+main section.projects .project .title {
   font-size: 1.4em;
   line-height: 3em;
 }
 
-main section.projects div.project div.images img {
+main section.projects .project .images img {
   width: 50%;
   padding: 2px;
   -webkit-box-shadow: 0px 0px 5px 0px #59171c;
@@ -330,16 +331,16 @@ main section.projects div.project div.images img {
   cursor: pointer;
 }
 
-main section.projects div.project div.info {
+main section.projects .project div.info {
   font-size: 1em;
 }
 
-main section.projects div.project div.info a {
+main section.projects .project div.info a {
   font-weight: 500;
   color: #59171c;
 }
 
-main section.projects div.project div.info a:hover {
+main section.projects .project div.info a:hover {
   color: #c6adaf;
 }
 
@@ -347,43 +348,43 @@ main section.progress {
   position: relative;
 }
 
-main section.progress div.header {
+main section.progress .header {
   background-color: #5d3d40;
   color: #faf2f3;
   border-radius: 10vh 0  0 10vh;
 }
 
 @media only screen and (min-width: 600px) {
-  main section.progress div.header {
+  main section.progress .header {
     background-color: yellow;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  main section.progress div.header {
+  main section.progress .header {
     background-color: red;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  main section.progress div.header {
+  main section.progress .header {
     background-color: orange;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  main section.progress div.header {
+  main section.progress .header {
     background-color: blue;
   }
 }
 
 @media only screen and (min-width: 2000px) {
-  main section.progress div.header {
+  main section.progress .header {
     background-color: darkblue;
   }
 }
 
-main section.progress div.progress-info {
+main section.progress .progress-info {
   top: 0;
   left: 0;
   width: 80%;
@@ -395,12 +396,12 @@ main section.contact {
   position: relative;
 }
 
-main section.contact div.header {
+main section.contact .header {
   border-radius: 0 10vh 10vh 0;
   background-color: #c6adaf;
 }
 
-main section.contact div.contact-form {
+main section.contact .contact-form {
   width: 100%;
   height: 70vh;
 }
@@ -410,14 +411,14 @@ footer {
   color: #faf2f3;
 }
 
-footer div.socials {
+footer .socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: 1.5em;
 }
 
-footer div.socials a {
+footer .socials a {
   width: 100%;
   color: #faf2f3;
   text-align: center;
@@ -425,12 +426,12 @@ footer div.socials a {
   transition: .3s;
 }
 
-footer div.socials a:hover {
+footer .socials a:hover {
   background-color: #faf2f3;
   color: #59171c;
 }
 
-footer div.rights {
+footer .rights {
   line-height: 2em;
   font-size: 0.8em;
   text-align: center;
@@ -458,41 +459,22 @@ footer div.rights {
 }
 
 @media only screen and (min-width: 768px) {
-  header i.fas {
+  header nav {
+    width: 30%;
     right: 10vw;
+    border-radius: 0 0  40% 50%;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  header i.fas {
-    right: 13vw;
+  header nav {
+    width: 75%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  header i.fas {
-    right: 18vmax;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  header i.fas.fa-angle-up {
-    top: 18vw;
-    right: 8vw;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  header i.fas.fa-angle-up {
-    top: 13vw;
-    right: 6vw;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  header i.fas.fa-angle-up {
-    top: 9vw;
-    right: 4vw;
+  header nav {
+    width: 50%;
   }
 }
 
@@ -531,21 +513,19 @@ footer div.rights {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  main section div.info {
-    width: 90%;
-  }
+main section div.header {
+  border-radius: 10vh;
 }
 
-@media only screen and (min-width: 992px) {
-  main section div.info {
-    width: 75%;
-  }
+main section.projects div.header {
+  border-radius: 10vh;
 }
 
-@media only screen and (min-width: 1200px) {
-  main section div.info {
-    width: 50%;
-  }
+main section.progress div.header {
+  border-radius: 10vh;
+}
+
+main section.contacts div.header {
+  border-radius: 10vh;
 }
 /*# sourceMappingURL=style.css.map */
