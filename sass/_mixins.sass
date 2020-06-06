@@ -4,22 +4,18 @@
 =colorSet2()
     background-color: $color2
     color: $color5
-    +respond(xs)
+    // +respond(xs)
     
-    +respond(s)
-        background-color: yellow
-    +respond(m)
-        background-color: red
-    +respond(l)
-        background-color: orange
-    +respond(xl)
-        background-color: blue
-    +respond(xxl)
-        background-color: darkblue
-    
-    // @media (max-width: 900px) 
+    // +respond(s)
+    //     background-color: yellow
+    // +respond(m)
+    //     background-color: red
+    // +respond(l)
+    //     background-color: orange
+    // +respond(xl)
     //     background-color: blue
- 
+    // +respond(xxl)
+    //     background-color: darkblue
 =respond($breakpoint)
     @if($breakpoint == xs)  
       @media only screen and (max-width: 600px)

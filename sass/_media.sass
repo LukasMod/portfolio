@@ -8,14 +8,22 @@ header
     +respond(xl)
         left: 18vw
         right: 60%
-
     nav
         +respond(m)
             width: 30%
             right: 10vw
             border-radius: 0 0  40% 50%
         +respond(l)
-            width: 75%
+            
+            width: 50%
+            right: 0
+            border-radius: 0 0 0 10vh
+            flex-direction: row
+            justify-content: space-around
+            &.off 
+                top: 0
+            & div.burger
+                display: none
         +respond(xl)
             width: 50%
 
@@ -23,7 +31,7 @@ aside
     +respond(xs)
         flex-basis: 0%
     +respond(s)
-       flex-basis: 0%
+        flex-basis: 0%
     +respond(m)
        flex-basis: 30vw
     +respond(l)
@@ -32,32 +40,19 @@ aside
        flex-basis: 40vw
 main
     section
-        div.header
-            border-radius: 10vh
-            // div.header
-            //     border-radius: 10vh
-            // div.info
-            //     +respond(m)
-            //         width: 90%
-            //     +respond(l)
-            //         width: 75%
-            //     +respond(xl)
-            //         width: 50%
-
-
-main
-    section
-        // &.about
-        //     div.header
-        //         border-radius: 10vh
-        &.projects
-            div.header
+        +respond(m)
+            &.hello div.short
                 border-radius: 10vh
-        &.progress
-            div.header
-                border-radius: 10vh
-        &.contacts 
-            div.header
-                border-radius: 10vh
+            &.about
+                    border-radius: 10vh
+            &.projects
+                div.header
+                    border-radius: 10vh
+            &.progress
+                div.header
+                    border-radius: 10vh
+            &.contact 
+                div.header
+                    border-radius: 10vh
 
 

@@ -59,41 +59,13 @@ header nav {
   background-color: #5d3d40;
   color: #faf2f3;
   border-radius: 0 0  0 25%;
+  border: 1px solid #faf2f3;
+  text-transform: uppercase;
   z-index: 1;
   opacity: 0.9;
   -webkit-transition: .2s;
   transition: .2s;
   padding: 3vh;
-}
-
-@media only screen and (min-width: 600px) {
-  header nav {
-    background-color: yellow;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  header nav {
-    background-color: red;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  header nav {
-    background-color: orange;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  header nav {
-    background-color: blue;
-  }
-}
-
-@media only screen and (min-width: 2000px) {
-  header nav {
-    background-color: darkblue;
-  }
 }
 
 header nav a {
@@ -237,7 +209,7 @@ main section.hello .short {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #c6adaf;
-  width: 60%;
+  width: 58%;
   height: 75%;
   letter-spacing: 0.05em;
   padding: 2vmin 2vmin 2vmin 2vmin;
@@ -257,36 +229,6 @@ main section.about {
   color: #faf2f3;
 }
 
-@media only screen and (min-width: 600px) {
-  main section.about {
-    background-color: yellow;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main section.about {
-    background-color: red;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  main section.about {
-    background-color: orange;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  main section.about {
-    background-color: blue;
-  }
-}
-
-@media only screen and (min-width: 2000px) {
-  main section.about {
-    background-color: darkblue;
-  }
-}
-
 main section.about .header {
   position: relative;
 }
@@ -294,6 +236,7 @@ main section.about .header {
 main section.about .info {
   height: auto;
   padding-top: 0;
+  text-align: center;
 }
 
 main section.projects {
@@ -352,36 +295,6 @@ main section.progress .header {
   background-color: #5d3d40;
   color: #faf2f3;
   border-radius: 10vh 0  0 10vh;
-}
-
-@media only screen and (min-width: 600px) {
-  main section.progress .header {
-    background-color: yellow;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main section.progress .header {
-    background-color: red;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  main section.progress .header {
-    background-color: orange;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  main section.progress .header {
-    background-color: blue;
-  }
-}
-
-@media only screen and (min-width: 2000px) {
-  main section.progress .header {
-    background-color: darkblue;
-  }
 }
 
 main section.progress .progress-info {
@@ -468,7 +381,21 @@ footer .rights {
 
 @media only screen and (min-width: 992px) {
   header nav {
-    width: 75%;
+    width: 50%;
+    right: 0;
+    border-radius: 0 0 0 10vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header nav.off {
+    top: 0;
+  }
+  header nav div.burger {
+    display: none;
   }
 }
 
@@ -513,19 +440,21 @@ footer .rights {
   }
 }
 
-main section div.header {
-  border-radius: 10vh;
-}
-
-main section.projects div.header {
-  border-radius: 10vh;
-}
-
-main section.progress div.header {
-  border-radius: 10vh;
-}
-
-main section.contacts div.header {
-  border-radius: 10vh;
+@media only screen and (min-width: 768px) {
+  main section.hello div.short {
+    border-radius: 10vh;
+  }
+  main section.about {
+    border-radius: 10vh;
+  }
+  main section.projects div.header {
+    border-radius: 10vh;
+  }
+  main section.progress div.header {
+    border-radius: 10vh;
+  }
+  main section.contact div.header {
+    border-radius: 10vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */

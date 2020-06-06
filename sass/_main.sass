@@ -2,7 +2,6 @@ main
     background-color: $color5
     display: flex
     flex-direction: row
-
     section
         display: flex
         flex-direction: column
@@ -30,14 +29,6 @@ main
             padding: 3vh
             text-align: justify
             font-weight: 300
-            // +respond(m)
-            //     width: 90%
-            // +respond(l)
-            //     width: 75%
-            // +respond(xl)
-            //     width: 50%
-
-            
     section.hello
         display: flex
         flex-direction: row
@@ -46,7 +37,6 @@ main
         align-items: center
         justify-content: space-between
         margin-top: 0
-
         +colorSet1
         .short 
             box-sizing: border-box
@@ -55,7 +45,7 @@ main
             align-items: center
             justify-content: center
             background-color: $color4
-            width: 60%
+            width: 58%
             height: 75%
             letter-spacing: 0.05em
             padding: 2vmin 2vmin 2vmin 2vmin
@@ -65,7 +55,6 @@ main
             max-height: 95%
             border-radius: 50%
             border: 1px solid $color1
-
     section.about
         border-radius: 10vh 0 0 10vh
         +colorSet2
@@ -74,19 +63,18 @@ main
         .info
             height: auto
             padding-top: 0
+            text-align: center
     section.projects
         +colorSet1
         .header
             border-radius: 0 10vh 10vh 0 
             background-color: $color4
-
         .project
             display: flex
             flex-direction: column                
             .title
                 font-size: 1.4em
                 line-height: 3em
-                
             .images
                 img
                     width: 50%
@@ -110,9 +98,7 @@ main
         .progress-info    
             top: 0
             left: 0
-            width: 80%
-
-                        
+            width: 80%                        
     section.contact
         +colorSet1
         position: relative
@@ -122,5 +108,3 @@ main
         .contact-form
             width: 100%
             height: 70vh
-            
-        

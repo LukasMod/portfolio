@@ -7,25 +7,24 @@ header
     background-color: $color5
     color: $color1
     width: 100%
-
     .name
         position: absolute
         font-size: 2em
         padding: 5vmin
         width: 70%
-            
     nav 
         position: fixed
         display: flex
         flex-direction: column
         align-items: center
-        // justify-content: flex-start
         box-sizing: border-box
         right: 0
         top: 0
         width: 25vw
         +colorSet2()
         border-radius: 0 0  0 25%
+        border: 1px solid $color5
+        text-transform: uppercase
         z-index: 1
         opacity: 0.9
         transition: .2s
@@ -58,14 +57,9 @@ header
                 font-size: 2em
                 top: calc(22vh + 20px)
                 border: none
-                
-
                 &:active
                     color: $color1
             &.off 
                 display: none
-                
-            
-
     nav.off 
         top: -25vh
